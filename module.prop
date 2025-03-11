@@ -4,4 +4,4 @@ version=1.0.2
 versionCode=102
 author=avencores
 description=🛡 Модуль для разблокировки зарубежных сервисов AI и других для России 🌍
-updateJson=https://github.com/AvenCores/Unlock_AI_and_EN_Services_for_Russia/raw/refs/heads/main/update.json
+updateJson=https://raw.githubusercontent.com/AvenCores/Unlock_AI_and_EN_Services_for_Russia/refs/heads/main/update.json
