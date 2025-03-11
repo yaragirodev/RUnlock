@@ -1,7 +1,7 @@
 id=unlockallaiandservicesforrussia
-name=Unclock AI and EN Services for Russia
-version=1.0.0
-versionCode=10
+name=Unlock AI and EN Services for Russia
+version=1.0.2
+versionCode=102
 author=avencores
 description=🛡 Модуль для разблокировки зарубежных сервисов AI и других для России 🌍
 updateJson=https://github.com/AvenCores/Unclock_AI_and_EN_Services_for_Russia/raw/refs/heads/main/update.json
