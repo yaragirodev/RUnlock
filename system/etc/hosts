@@ -1,6 +1,7 @@
 127.0.0.1       localhost
 ::1             ip6-localhost
 
+# Дополнение к zapret, некоторые сайты заблокированы по IP:
 157.240.245.174 instagram.com
 157.240.245.174 www.instagram.com
 157.240.245.174 b.i.instagram.com
@@ -8,6 +9,8 @@
 3.66.189.153 protonmail.com
 3.66.189.153 mail.proton.me
 64.233.164.198 yt3.ggpht.com
+
+# ChatGPT, OpenAI:
 204.12.192.222 chatgpt.com
 204.12.192.222 ab.chatgpt.com
 204.12.192.222 auth.openai.com
@@ -18,10 +21,12 @@
 204.12.192.222 cdn.auth0.com
 204.12.192.222 tcr9i.chat.openai.com
 204.12.192.222 webrtc.chatgpt.com
-204.12.192.219 android.chat.openai.com
+204.12.192.222 android.chat.openai.com
 204.12.192.222 api.openai.com
-204.12.192.221 operator.chatgpt.com
+204.12.192.222 operator.chatgpt.com
 204.12.192.222 sora.com
+
+# Gemini, Gemini API, AI Studio, Google Labs, NotebookLM:
 138.201.204.218 gemini.google.com
 204.12.192.222 aistudio.google.com
 204.12.192.222 generativelanguage.googleapis.com
@@ -35,11 +40,15 @@
 204.12.192.222 labs.google
 204.12.192.222 notebooklm.google
 204.12.192.222 notebooklm.google.com
+
+# Microsoft Copilot, Microsoft Rewards, Xbox:
 204.12.192.222 copilot.microsoft.com
 204.12.192.222 sydney.bing.com
 204.12.192.222 edgeservices.bing.com
 204.12.192.221 rewards.bing.com
 50.7.85.221 xsts.auth.xboxlive.com
+
+# Spotify:
 204.12.192.222 api.spotify.com
 204.12.192.222 xpui.app.spotify.com
 204.12.192.222 appresolve.spotify.com
@@ -53,30 +62,83 @@
 204.12.192.222 aet.spotify.com
 204.12.192.222 www.spotify.com
 204.12.192.222 accounts.spotify.com
+
+# Codeium:
 50.7.87.85 codeium.com
 50.7.85.219 inference.codeium.com
+
+# GitHub Copilot:
 50.7.87.84 api.github.com
 50.7.85.221 api.individual.githubcopilot.com
 50.7.87.83 proxy.individual.githubcopilot.com
+
+# JetBrains:
 50.7.85.221 datalore.jetbrains.com
 107.150.34.100 plugins.jetbrains.com
 204.12.192.222 download.jetbrains.com
+
+# ElevenLabs:
 204.12.192.222 elevenlabs.io
 204.12.192.222 api.us.elevenlabs.io
 204.12.192.222 elevenreader.io
+
+# Truth Social
 204.12.192.221 truthsocial.com
 204.12.192.221 static-assets-1.truthsocial.com
+
+# Grok
 185.250.151.49 grok.com
 185.250.151.49 accounts.x.ai
+
+# Другое:
 204.12.192.222 claude.ai
 204.12.192.222 www.notion.so
 50.7.85.222 www.canva.com
 204.12.192.222 www.intel.com
 204.12.192.219 www.dell.com
-50.7.85.219 www.tiktok.com
-142.54.189.106 web.archive.org
+50.7.85.219 www.tiktok.com # Только на сайте. Приложение определяет регион по оператору, а не по IP. Поэтому есть моды.
+142.54.189.106 web.archive.org # Блокирует от российских IP некоторые сайты
 204.12.192.220 developer.nvidia.com
 107.150.34.99 builds.parsec.app
+
+# Блокировка реально плохих сайтов
+# Скримеры:
 0.0.0.0 only-fans.uk
 0.0.0.0 only-fans.me
 0.0.0.0 onlyfans.wtf
+
+# Добавлено из https://4pda.to/forum/index.php?showtopic=915158&view=findpost&p=133873426
+89.108.98.20  bingclientmsa.sapphire.microsoftapp.net
+89.108.98.20  gateway.bingviz.microsoftapp.net
+89.108.98.20  img-s-msn-com.akamaized.net
+89.108.98.20  in.appcenter.ms
+89.108.98.20  mobile.events.data.microsoft.com
+89.108.98.20  prod.rewardsplatform.microsoft.com
+89.108.98.20  prod-switzerlandnorth.access-point.cloudmessaging.edge.microsoft.com
+89.108.98.20  sapphire.api.microsoftapp.net
+89.108.98.20  self.events.data.microsoft.com
+89.108.98.20  ssl.bing.com
+89.108.98.20  superapp.msn.com
+89.108.98.20  th.bing.com
+89.108.98.20  www.bingapis.com
+89.108.98.20  www.msn.com
+89.108.98.20  api.msn.com
+89.108.98.20  assets.msn.com
+89.108.98.20  c.msn.com
+89.108.98.20  prod-streaming-video-msn-com.akamaized.net
+89.108.98.20  location.microsoft.com
+89.108.98.20  prod-japaneast.access-point.cloudmessaging.edge.microsoft.com
+89.108.98.20  swiftkey.com
+89.108.98.20  data.swiftkey.com
+89.108.98.20  assistantfrontend-pa.googleapis.com
+89.108.98.20  firebaseinstallations.googleapis.com
+89.108.98.20  geller-pa.googleapis.com
+89.108.98.20  lamssettings-pa.googleapis.com
+89.108.98.20  notifications-pa.googleapis.com
+89.108.98.20  searchnotifications-pa.googleapis.com
+89.108.98.20  speechs3proto2-pa.googleapis.com
+89.108.98.20  taskassist-pa.googleapis.com
+89.108.98.20  update.googleapis.com
+89.108.98.20  www.googleapis.com
+89.108.98.20  android.googleapis.com
+89.108.98.20  ai-chat.bsg.brave.com
