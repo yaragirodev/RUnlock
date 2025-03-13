@@ -29,6 +29,7 @@
 * Xbox
 * Rewards
 * ElevenLabs
+* Tidal
   
 **И так далее.**
 
