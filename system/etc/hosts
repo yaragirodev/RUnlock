@@ -21,9 +21,9 @@
 204.12.192.222 cdn.auth0.com
 204.12.192.222 tcr9i.chat.openai.com
 204.12.192.222 webrtc.chatgpt.com
-204.12.192.222 android.chat.openai.com
+204.12.192.219 android.chat.openai.com
 204.12.192.222 api.openai.com
-204.12.192.222 operator.chatgpt.com
+204.12.192.221 operator.chatgpt.com
 204.12.192.222 sora.com
 
 # Gemini, Gemini API, AI Studio, Google Labs, NotebookLM:
@@ -89,6 +89,20 @@
 # Grok
 185.250.151.49 grok.com
 185.250.151.49 accounts.x.ai
+
+# Tidal
+204.12.192.222 api.tidal.com
+204.12.192.222 listen.tidal.com
+204.12.192.222 login.tidal.com
+204.12.192.222 auth.tidal.com
+204.12.192.222 link.tidal.com
+204.12.192.222 dd.tidal.com
+204.12.192.222 resources.tidal.com
+204.12.192.221 images.tidal.com
+204.12.192.222 fsu.fa.tidal.com
+204.12.192.222 geolocation.onetrust.com
+204.12.192.222 api.squareup.com
+204.12.192.222 api-global.squareup.com
 
 # Другое:
 204.12.192.222 claude.ai
