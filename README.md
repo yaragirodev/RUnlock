@@ -2,6 +2,21 @@
 
 ![maxresdefault](https://github.com/user-attachments/assets/59149c06-a25d-48c5-a0b0-7f17a7832e27)
 
+<p align="center">
+  <!-- Бейдж лицензии -->
+  <a href="https://github.com/AvenCores/Unlock_AI_and_EN_Services_for_Russia/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/AvenCores/Unlock_AI_and_EN_Services_for_Russia?style=flat-square" alt="License"/>
+  </a>
+  <!-- Бейдж последнего релиза -->
+  <a href="https://github.com/AvenCores/Unlock_AI_and_EN_Services_for_Russia/releases/latest">
+    <img src="https://img.shields.io/github/v/release/AvenCores/Unlock_AI_and_EN_Services_for_Russia?style=flat-square" alt="Latest release"/>
+  </a>
+  <!-- Бейдж количества скачиваний -->
+  <a href="https://github.com/AvenCores/Unlock_AI_and_EN_Services_for_Russia/releases">
+    <img src="https://img.shields.io/github/downloads/AvenCores/Unlock_AI_and_EN_Services_for_Russia/total?style=flat-square" alt="Downloads"/>
+  </a>
+</p>
+
 # ⚠ Примечание
 **Модуль не совместим с другими модулями, которые модифицируют или заменяют системный файл hosts.**
 
