@@ -1,3 +1,4 @@
+
 [![Youtube](https://user-images.githubusercontent.com/64781822/185656066-cdb875f1-ade6-4499-ae50-79a4f61fdc3e.png)](https://www.youtube.com/@avencores/) [![Telegram](https://user-images.githubusercontent.com/64781822/185657127-657c530b-3849-4931-ab91-63d6f0508330.png)](https://t.me/avencoresyt) [![VK](https://user-images.githubusercontent.com/64781822/185657778-21a240e2-da1f-4b72-b37e-447c9adebfcb.png)](https://vk.com/avencoresvk)
 
 ![maxresdefault](https://github.com/user-attachments/assets/59149c06-a25d-48c5-a0b0-7f17a7832e27)
@@ -22,6 +23,9 @@
 
 # ⚠ Примечание № 2
 **Если после установки модуля некоторые сервисы не работают, то, вероятно, ваш DNS-сервер подменяет адреса на свои. Замените свой DNS-сервер на Google или CloudFlare.**
+
+ - **DNS Google:**  `dns.google`
+ - **DNS CloudFlare:** `one.one.one.one`
 
 # 🌍 Модуль предназначен для разблокировки сервисов
 * ChatGPT
