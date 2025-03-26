@@ -53,9 +53,9 @@
 204.12.192.222 xpui.app.spotify.com
 204.12.192.222 appresolve.spotify.com
 204.12.192.222 login5.spotify.com
-50.7.87.84 login.app.spotify.com
-138.201.204.218 encore.scdn.co
-138.201.204.218 ap-gew1.spotify.com
+204.12.192.222 login.app.spotify.com
+204.12.192.222 encore.scdn.co
+204.12.192.222 ap-gew1.spotify.com
 204.12.192.222 gew1-spclient.spotify.com
 204.12.192.222 spclient.wg.spotify.com
 204.12.192.222 api-partner.spotify.com
@@ -89,6 +89,7 @@
 # Grok
 185.250.151.49 grok.com
 185.250.151.49 accounts.x.ai
+185.250.151.49 assets.grok.com
 
 # Tidal
 204.12.192.222 api.tidal.com
