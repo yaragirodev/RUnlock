@@ -16,7 +16,7 @@
   </span>
 </div>
 
-![maxresdefault](https://github.com/user-attachments/assets/59149c06-a25d-48c5-a0b0-7f17a7832e27)
+![maxresdefault](https://github.com/user-attachments/assets/a7333079-3bd3-405e-9a9e-c1f63191c1cf)
 
 <p align="center">
   <!-- Бейдж лицензии -->
