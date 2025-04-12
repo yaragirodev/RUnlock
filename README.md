@@ -1,5 +1,20 @@
-
-[![Youtube](https://user-images.githubusercontent.com/64781822/185656066-cdb875f1-ade6-4499-ae50-79a4f61fdc3e.png)](https://www.youtube.com/@avencores/) [![Telegram](https://user-images.githubusercontent.com/64781822/185657127-657c530b-3849-4931-ab91-63d6f0508330.png)](https://t.me/avencoresyt) [![VK](https://user-images.githubusercontent.com/64781822/185657778-21a240e2-da1f-4b72-b37e-447c9adebfcb.png)](https://vk.com/avencoresvk)
+<div align="center">
+  <span style="display: inline-block; width: 33.3%; text-align: left;">
+    <a href="https://www.youtube.com/@avencores/" target="_blank">
+      <img src="https://github.com/user-attachments/assets/338bcd74-e3c3-4700-87ab-7985058bd17e" alt="YouTube" height="40">
+    </a>
+  </span>
+  <span style="display: inline-block; width: 33.3%; text-align: center;">
+    <a href="https://t.me/avencoresyt" target="_blank">
+      <img src="https://github.com/user-attachments/assets/939f8beb-a49a-48cf-89b9-d610ee5c4b26" alt="Telegram" height="40">
+    </a>
+  </span>
+  <span style="display: inline-block; width: 33.3%; text-align: right;">
+    <a href="https://vk.com/avencoresvk" target="_blank">
+      <img src="https://github.com/user-attachments/assets/dc109dda-9045-4a06-95a5-3399f0e21dc4" alt="VK" height="40">
+    </a>
+  </span>
+</div>
 
 ![maxresdefault](https://github.com/user-attachments/assets/59149c06-a25d-48c5-a0b0-7f17a7832e27)
 
