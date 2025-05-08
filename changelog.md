@@ -1,2 +1,2 @@
 ### Что нового:
-- Фикс Spotify, блок IP Logger'ов
+- Добавлено Xbox Cloud Gaming, Clash Royale, Clash of Clans, Brawl Stars

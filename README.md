@@ -49,6 +49,7 @@
 * Gemini
 * Microsoft Copilot
 * Microsoft Rewards
+* Xbox Cloud Gaming
 * Truth Social, Google Labs
 * Claude
 * GitHub Copilot
@@ -67,6 +68,9 @@
 * Rewards
 * ElevenLabs
 * Tidal
+* Clash Royale
+* Clash of Clans
+* Brawl Stars
   
 **И так далее.**
 
