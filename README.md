@@ -50,7 +50,8 @@
 * Microsoft Copilot
 * Microsoft Rewards
 * Xbox Cloud Gaming
-* Truth Social, Google Labs
+* Truth Social
+* Google Labs
 * Claude
 * GitHub Copilot
 * AI Studio
