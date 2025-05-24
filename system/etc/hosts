@@ -26,7 +26,7 @@
 204.12.192.221 operator.chatgpt.com
 204.12.192.222 sora.com
 
-# Gemini, Gemini API, AI Studio, Google Labs, NotebookLM:
+# Сервисы Google:
 204.12.192.222 gemini.google.com
 204.12.192.222 aistudio.google.com
 204.12.192.222 generativelanguage.googleapis.com
@@ -40,6 +40,7 @@
 204.12.192.222 labs.google
 204.12.192.222 notebooklm.google
 204.12.192.222 notebooklm.google.com
+204.12.192.222 jules.google.com
 
 # Microsoft Copilot, Microsoft Rewards, Xbox, Xbox Cloud Gaming:
 204.12.192.222 copilot.microsoft.com
@@ -48,6 +49,7 @@
 204.12.192.221 rewards.bing.com
 78.40.217.193 xsts.auth.xboxlive.com
 50.7.87.86 xgpuwebf2p.gssv-play-prod.xboxlive.com
+50.7.87.86 xgpuweb.gssv-play-prod.xboxlive.com
 
 # Spotify:
 204.12.192.222 api.spotify.com
@@ -83,6 +85,8 @@
 204.12.192.222 elevenlabs.io
 204.12.192.222 api.us.elevenlabs.io
 204.12.192.222 elevenreader.io
+204.12.192.222 api.elevenlabs.io
+204.12.192.222 help.elevenlabs.io
 
 # Truth Social
 204.12.192.221 truthsocial.com
