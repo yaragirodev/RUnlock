@@ -73,8 +73,8 @@
 
 # GitHub Copilot:
 50.7.87.84 api.github.com
-50.7.85.221 api.individual.githubcopilot.com
-50.7.87.83 proxy.individual.githubcopilot.com
+204.12.192.222 api.individual.githubcopilot.com
+204.12.192.222 proxy.individual.githubcopilot.com
 
 # JetBrains:
 50.7.85.221 datalore.jetbrains.com
