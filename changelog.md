@@ -1,2 +1,2 @@
 ### Что нового:
-- Фикс GitHub Copilot
+- Фикс Instagram, OpenBitTorrent, Sora, Сервисы Google, Spotify

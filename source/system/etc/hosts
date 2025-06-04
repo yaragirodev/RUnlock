@@ -6,9 +6,11 @@
 157.240.245.174 www.instagram.com
 157.240.245.174 b.i.instagram.com
 157.240.245.174 z-p42-chat-e2ee-ig.facebook.com
+157.240.245.174 help.instagram.com
 3.66.189.153 protonmail.com
 3.66.189.153 mail.proton.me
 64.233.164.198 yt3.ggpht.com
+52.223.13.41 tracker.openbittorrent.com
 
 # ChatGPT, OpenAI:
 204.12.192.222 chatgpt.com
@@ -24,7 +26,7 @@
 204.12.192.219 android.chat.openai.com
 204.12.192.222 api.openai.com
 204.12.192.221 operator.chatgpt.com
-204.12.192.222 sora.com
+204.12.192.222 sora.chatgpt.com
 
 # Сервисы Google:
 204.12.192.222 gemini.google.com
@@ -41,6 +43,7 @@
 204.12.192.222 notebooklm.google
 204.12.192.222 notebooklm.google.com
 204.12.192.222 jules.google.com
+204.12.192.222 stitch.withgoogle.com
 
 # Microsoft Copilot, Microsoft Rewards, Xbox, Xbox Cloud Gaming:
 204.12.192.222 copilot.microsoft.com
@@ -65,7 +68,7 @@
 204.12.192.222 aet.spotify.com
 204.12.192.222 www.spotify.com
 204.12.192.222 accounts.spotify.com
-204.12.192.222 open.spotify.com
+204.12.192.221 open.spotify.com
 
 # Codeium:
 50.7.87.85 codeium.com
