@@ -1,7 +1,4 @@
-127.0.0.1       localhost
-::1             ip6-localhost
-
-# Дополнение к zapret, некоторые сайты заблокированы по IP:
+# Дополнение к zapret:
 157.240.245.174 instagram.com
 157.240.245.174 www.instagram.com
 157.240.245.174 b.i.instagram.com
@@ -70,10 +67,6 @@
 204.12.192.222 accounts.spotify.com
 204.12.192.221 open.spotify.com
 
-# Codeium:
-50.7.87.85 codeium.com
-50.7.85.219 inference.codeium.com
-
 # GitHub Copilot:
 50.7.87.84 api.github.com
 204.12.192.222 api.individual.githubcopilot.com
@@ -126,8 +119,45 @@
 179.43.168.109 game.brawlstarsgame.com
 18.239.69.129 game-assets.brawlstarsgame.com
 
+# DeepL
+204.12.192.222 deepl.com
+204.12.192.222 www.deepl.com
+204.12.192.222 www2.deepl.com
+204.12.192.222 login-wall.deepl.com
+204.12.192.219 w.deepl.com
+204.12.192.222 s.deepl.com
+204.12.192.222 dict.deepl.com
+204.12.192.222 ita-free.www.deepl.com
+204.12.192.222 write-free.www.deepl.com
+204.12.192.222 experimentation.deepl.com
+
+# Deezer
+204.12.192.220 deezer.com
+204.12.192.220 www.deezer.com
+204.12.192.220 dzcdn.net
+204.12.192.220 payment.deezer.com
+
+# Weather.com
+204.12.192.220 weather.com
+204.12.192.220 upsx.weather.com
+
+# Guilded
+204.12.192.219 guilded.gg
+204.12.192.219 www.guilded.gg
+
+# Twitch
+45.95.233.23 usher.ttvnw.net
+45.95.233.23 gql.twitch.tv
+
+# Fitbit
+204.12.192.219 api.fitbit.com
+204.12.192.219 fitbit-pa.googleapis.com
+204.12.192.219 fitbitvestibuleshim-pa.googleapis.com
+204.12.192.219 fitbit.google.com
+
 # Другое:
 204.12.192.222 claude.ai
+204.12.192.220 console.anthropic.com
 204.12.192.222 www.notion.so
 50.7.85.222 www.canva.com
 204.12.192.222 www.intel.com
@@ -136,6 +166,8 @@
 142.54.189.106 web.archive.org # Блокирует от российских IP некоторые сайты
 204.12.192.220 developer.nvidia.com
 107.150.34.99 builds.parsec.app
+204.12.192.220 tria.ge
+204.12.192.220 api.imgur.com
 
 # Блокировка реально плохих сайтов
 # Скримеры:

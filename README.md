@@ -85,9 +85,19 @@
 * Brawl Stars
 * OpenBitTorrent
 * Canva
-* Codeium
 * Parsec
 * Nvidia Developer
+* DeepL
+* Deezer
+* Weather.com
+* Guilded
+* Twitch
+* Fitbit
+* Jules (Google)
+* Stitch (Google)
+* Anthropic Console
+* Imgur
+* Tria.ge
 
 # 💰 Поддержать автора
 + **SBER**: `2202 2050 7215 4401`
