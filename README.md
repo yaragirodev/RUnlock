@@ -54,50 +54,120 @@
  - **DNS CloudFlare:** `one.one.one.one`
 
 # 🌍 Модуль предназначен для разблокировки сервисов 
-* Gemini 
-* ChatGPT 
-* Sora 
-* Grok 
-* Microsoft Copilot 
-* Microsoft Rewards 
-* Xbox Cloud Gaming 
-* Truth Social 
-* Google Labs 
-* Claude 
-* GitHub Copilot 
-* AI Studio 
-* Instagram 
-* TikTok 
-* Intel 
-* Dell 
-* Web Archive 
-* Proton Mail 
-* JetBrains 
-* NotebookLM 
-* Spotify 
-* Notion 
-* Xbox 
-* Rewards 
-* ElevenLabs 
-* Tidal 
-* Clash Royale 
-* Clash of Clans
-* Brawl Stars
-* OpenBitTorrent
-* Canva
-* Parsec
-* Nvidia Developer
-* DeepL
-* Deezer
-* Weather.com
-* Guilded
-* Twitch
-* Fitbit
-* Jules (Google)
-* Stitch (Google)
-* Anthropic Console
-* Imgur
-* Tria.ge
+### 📱 **Социальные сети и мессенджеры**
+
+* **Instagram**
+* **TikTok**
+* **Truth Social**
+* **Guilded**
+
+---
+
+### 🧠 **ИИ-сервисы и генеративный ИИ**
+
+* **ChatGPT / OpenAI**
+* **Sora (OpenAI видео)**
+* **Claude (Anthropic)**
+* **Grok (xAI)**
+* **Gemini (Google)**
+* **AI Studio (Google)**
+* **NotebookLM (Google)**
+* **Google Labs (Jules, Stitch и др.)**
+* **Microsoft Copilot**
+* **GitHub Copilot**
+* **ElevenLabs**
+* **DeepL**
+
+---
+
+### 🎮 **Игры и игровые сервисы**
+
+* **Clash Royale**
+* **Clash of Clans**
+* **Brawl Stars**
+* **Supercell (общий доступ, включая аккаунты и ассеты)**
+* **Xbox**
+* **Xbox Cloud Gaming**
+* **Microsoft Rewards**
+
+---
+
+### 🎵 **Музыкальные сервисы**
+
+* **Spotify**
+* **Tidal**
+* **Deezer**
+
+---
+
+### ✉️ **Электронная почта и облако**
+
+* **Proton Mail**
+* **Mail.proton.me**
+
+---
+
+### 🧩 **Разработка и программирование**
+
+* **GitHub (включая Copilot API)**
+* **JetBrains (Datalore, Plugins, загрузки)**
+* **Google AI API (generativelanguage.googleapis.com и др.)**
+* **NVIDIA Developer**
+* **Parsec (remote desktop)**
+
+---
+
+### 🛠 **Продуктивность и утилиты**
+
+* **Notion**
+* **Canva**
+* **Intel**
+* **Dell**
+* **Weather.com**
+* **Imgur**
+* **Web Archive (archive.org)**
+* **Tria.ge (sandbox)**
+
+---
+
+### ⌚️ **Здоровье и фитнес**
+
+* **Fitbit**
+
+---
+
+### 💳 **Финансовые сервисы**
+
+* **Square / Squareup (через Tidal)**
+
+---
+
+### 📛 **Блокировка вредных сайтов**
+
+* **Скримеры**:
+
+  * only-fans.uk
+  * only-fans.me
+  * onlyfans.wtf
+* **IP-логгеры**:
+
+  * iplogger.org
+  * wl.gl
+  * ed.tc
+  * bc.ax
+  * maper.info
+  * 2no.co
+  * yip.su
+  * iplis.ru
+  * ezstat.ru
+  * iplog.co
+  * grabify.org
+
+---
+
+### 🌐 **Торренты**
+
+* **OpenBitTorrent (tracker.openbittorrent.com)**
 
 # 💰 Поддержать автора
 + **SBER**: `2202 2050 7215 4401`

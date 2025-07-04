@@ -24,6 +24,9 @@
 204.12.192.222 api.openai.com
 204.12.192.221 operator.chatgpt.com
 204.12.192.222 sora.chatgpt.com
+204.12.192.222 sora.com
+204.12.192.222 sora.chatgpt.com
+204.12.192.222 videos.openai.com
 
 # Сервисы Google:
 204.12.192.222 gemini.google.com
@@ -47,9 +50,9 @@
 204.12.192.222 sydney.bing.com
 204.12.192.222 edgeservices.bing.com
 204.12.192.221 rewards.bing.com
-78.40.217.193 xsts.auth.xboxlive.com
-50.7.87.86 xgpuwebf2p.gssv-play-prod.xboxlive.com
-50.7.87.86 xgpuweb.gssv-play-prod.xboxlive.com
+204.12.192.222 xsts.auth.xboxlive.com
+204.12.192.222 xgpuwebf2p.gssv-play-prod.xboxlive.com
+204.12.192.222 xgpuweb.gssv-play-prod.xboxlive.com
 
 # Spotify:
 204.12.192.222 api.spotify.com
@@ -110,7 +113,7 @@
 # Clash Royale, Clash of Clans, Brawl Stars
 3.160.212.81 cdn.id.supercell.com
 18.172.112.81 security.id.supercell.com
-3.165.113.14 accounts.supercell.com
+45.95.233.23 accounts.supercell.com
 18.66.195.96 game-assets.clashroyaleapp.com
 51.158.190.98 game.clashroyaleapp.com
 3.162.38.39 game-assets.clashofclans.com
@@ -118,6 +121,7 @@
 108.157.194.81 clashofclans.inbox.supercell.com
 179.43.168.109 game.brawlstarsgame.com
 18.239.69.129 game-assets.brawlstarsgame.com
+204.12.192.222 store.supercell.com
 
 # DeepL
 204.12.192.222 deepl.com
@@ -145,10 +149,6 @@
 204.12.192.219 guilded.gg
 204.12.192.219 www.guilded.gg
 
-# Twitch
-45.95.233.23 usher.ttvnw.net
-45.95.233.23 gql.twitch.tv
-
 # Fitbit
 204.12.192.219 api.fitbit.com
 204.12.192.219 fitbit-pa.googleapis.com
@@ -168,13 +168,15 @@
 107.150.34.99 builds.parsec.app
 204.12.192.220 tria.ge
 204.12.192.220 api.imgur.com
+45.95.233.23 www.dyson.com
+45.95.233.23 www.dyson.fr
+45.95.233.23 usher.ttvnw.net
 
 # Блокировка реально плохих сайтов
 # Скримеры:
 0.0.0.0 only-fans.uk
 0.0.0.0 only-fans.me
 0.0.0.0 onlyfans.wtf
-
 # IP Logger'ы:
 0.0.0.0 iplogger.org
 0.0.0.0 wl.gl
