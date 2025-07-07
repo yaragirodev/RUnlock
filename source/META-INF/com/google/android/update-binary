@@ -1,33 +1,49 @@
-#!/sbin/sh
 
-#################
-# Initialization
-#################
+#!/sbin/sh
 
 umask 022
 
-# echo before loading util_functions
-ui_print() { echo "$1"; }
-
-require_new_magisk() {
-  ui_print "*******************************"
-  ui_print " Please install Magisk v20.4+! "
-  ui_print "*******************************"
-  exit 1
+# Универсальная функция вывода
+ui_print() {
+  if [ "$OUTFD" ]; then
+    echo -e "ui_print $1\nui_print" >&$OUTFD
+  else
+    echo "$1"
+  fi
 }
-
-#########################
-# Load util_functions.sh
-#########################
 
 OUTFD=$2
 ZIPFILE=$3
 
 mount /data 2>/dev/null
 
-[ -f /data/adb/magisk/util_functions.sh ] || require_new_magisk
-. /data/adb/magisk/util_functions.sh
-[ $MAGISK_VER_CODE -lt 20400 ] && require_new_magisk
-
-install_module
-exit 0
+# Проверка Magisk/KernelSU/форков/APatch
+if [ -f /data/adb/magisk/util_functions.sh ]; then
+  . /data/adb/magisk/util_functions.sh
+  if [ "$MAGISK_VER_CODE" ] && [ $MAGISK_VER_CODE -lt 20400 ]; then
+    ui_print "*******************************"
+    ui_print " Требуется Magisk v20.4+! "
+    ui_print "*******************************"
+    exit 1
+  fi
+  install_module
+  exit 0
+elif [ -f /data/adb/ksu/util_functions.sh ]; then
+  . /data/adb/ksu/util_functions.sh
+  install_module
+  exit 0
+elif [ -f /data/adb/KernelSU/util_functions.sh ]; then
+  . /data/adb/KernelSU/util_functions.sh
+  install_module
+  exit 0
+elif [ -f /data/adb/apatch/util_functions.sh ]; then
+  . /data/adb/apatch/util_functions.sh
+  install_module
+  exit 0
+else
+  ui_print "*******************************"
+  ui_print " Не найдено окружение Magisk/KernelSU/APatch! "
+  ui_print " Установка невозможна. "
+  ui_print "*******************************"
+  exit 1
+fi
