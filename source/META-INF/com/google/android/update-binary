@@ -1,16 +1,9 @@
 #!/sbin/sh
 
-#################
-# Initialization
-#################
-
 umask 022
 
-# echo before loading util_functions
 ui_print() { echo "$1"; }
 
-
-# Проверка на форки Magisk, KernelSU и APatch
 require_supported_env() {
   if [ -f /data/adb/magisk/util_functions.sh ]; then
     . /data/adb/magisk/util_functions.sh
@@ -20,6 +13,9 @@ require_supported_env() {
       ui_print "*******************************"
       exit 1
     fi
+    ui_print "*******************************"
+    ui_print " Обнаружен Magisk. Продолжаем... "
+    ui_print "*******************************"
     return 0
   fi
   if [ -f /data/adb/ksu/bin/ksud ]; then
@@ -39,11 +35,6 @@ require_supported_env() {
   ui_print "*******************************"
   exit 1
 }
-
-#########################
-# Load util_functions.sh
-#########################
-
 
 OUTFD=$2
 ZIPFILE=$3
