@@ -1,49 +1,56 @@
-
 #!/sbin/sh
+
+#################
+# Initialization
+#################
 
 umask 022
 
-# Универсальная функция вывода
-ui_print() {
-  if [ "$OUTFD" ]; then
-    echo -e "ui_print $1\nui_print" >&$OUTFD
-  else
-    echo "$1"
+# echo before loading util_functions
+ui_print() { echo "$1"; }
+
+
+# Проверка на форки Magisk, KernelSU и APatch
+require_supported_env() {
+  if [ -f /data/adb/magisk/util_functions.sh ]; then
+    . /data/adb/magisk/util_functions.sh
+    if [ $MAGISK_VER_CODE -lt 20400 ]; then
+      ui_print "*******************************"
+      ui_print " Пожалуйста, установите Magisk v20.4+! "
+      ui_print "*******************************"
+      exit 1
+    fi
+    return 0
   fi
+  if [ -f /data/adb/ksu/bin/ksud ]; then
+    ui_print "*******************************"
+    ui_print " Обнаружен KernelSU. Продолжаем... "
+    ui_print "*******************************"
+    return 0
+  fi
+  if [ -f /data/adb/apatch/apatchd ]; then
+    ui_print "*******************************"
+    ui_print " Обнаружен APatch. Продолжаем... "
+    ui_print "*******************************"
+    return 0
+  fi
+  ui_print "*******************************"
+  ui_print " Не найден поддерживаемый менеджер root (Magisk, KernelSU, APatch)! "
+  ui_print "*******************************"
+  exit 1
 }
+
+#########################
+# Load util_functions.sh
+#########################
+
 
 OUTFD=$2
 ZIPFILE=$3
 
 mount /data 2>/dev/null
 
-# Проверка Magisk/KernelSU/форков/APatch
-if [ -f /data/adb/magisk/util_functions.sh ]; then
-  . /data/adb/magisk/util_functions.sh
-  if [ "$MAGISK_VER_CODE" ] && [ $MAGISK_VER_CODE -lt 20400 ]; then
-    ui_print "*******************************"
-    ui_print " Требуется Magisk v20.4+! "
-    ui_print "*******************************"
-    exit 1
-  fi
-  install_module
-  exit 0
-elif [ -f /data/adb/ksu/util_functions.sh ]; then
-  . /data/adb/ksu/util_functions.sh
-  install_module
-  exit 0
-elif [ -f /data/adb/KernelSU/util_functions.sh ]; then
-  . /data/adb/KernelSU/util_functions.sh
-  install_module
-  exit 0
-elif [ -f /data/adb/apatch/util_functions.sh ]; then
-  . /data/adb/apatch/util_functions.sh
-  install_module
-  exit 0
-else
-  ui_print "*******************************"
-  ui_print " Не найдено окружение Magisk/KernelSU/APatch! "
-  ui_print " Установка невозможна. "
-  ui_print "*******************************"
-  exit 1
-fi
+require_supported_env
+
+install_module
+exit 0
