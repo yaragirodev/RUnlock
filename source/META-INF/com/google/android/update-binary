@@ -10,28 +10,68 @@ require_supported_env() {
     if [ $MAGISK_VER_CODE -lt 20400 ]; then
       ui_print "*******************************"
       ui_print " Пожалуйста, установите Magisk v20.4+! "
+      ui_print ""
+      ui_print "Написать автору в Телеграм: https://t.me/avencores"
+      ui_print "Написать автору в VK: https://vk.com/avencores"
+      ui_print ""
+      ui_print "Ютуб канал: https://youtube.com/@avencores"
+      ui_print "Рутуб канал: https://rutube.ru/channel/34072414"
+      ui_print "Дзен канал: https://dzen.ru/avencores"
+      ui_print "Группа в ВК: https://vk.com/avencoresvk"
       ui_print "*******************************"
       exit 1
     fi
     ui_print "*******************************"
     ui_print " Обнаружен Magisk. Продолжаем... "
+    ui_print ""
+    ui_print "Написать автору в Телеграм: https://t.me/avencores"
+    ui_print "Написать автору в ВК: https://vk.com/avencores"
+    ui_print ""
+    ui_print "Ютуб канал: https://youtube.com/@avencores"
+    ui_print "Рутуб канал: https://rutube.ru/channel/34072414"
+    ui_print "Дзен канал: https://dzen.ru/avencores"
+    ui_print "Группа в ВК: https://vk.com/avencoresvk"
     ui_print "*******************************"
     return 0
   fi
   if [ -f /data/adb/ksu/bin/ksud ]; then
     ui_print "*******************************"
     ui_print " Обнаружен KernelSU. Продолжаем... "
+    ui_print ""
+    ui_print "Написать автору в Телеграм: https://t.me/avencores"
+    ui_print "Написать автору в ВК: https://vk.com/avencores"
+    ui_print ""
+    ui_print "Ютуб канал: https://youtube.com/@avencores"
+    ui_print "Рутуб канал: https://rutube.ru/channel/34072414"
+    ui_print "Дзен канал: https://dzen.ru/avencores"
+    ui_print "Группа в ВК: https://vk.com/avencoresvk"
     ui_print "*******************************"
     return 0
   fi
   if [ -f /data/adb/apatch/apatchd ]; then
     ui_print "*******************************"
     ui_print " Обнаружен APatch. Продолжаем... "
+    ui_print ""
+    ui_print "Написать автору в Телеграм: https://t.me/avencores"
+    ui_print "Написать автору в ВК: https://vk.com/avencores"
+    ui_print ""
+    ui_print "Ютуб канал: https://youtube.com/@avencores"
+    ui_print "Рутуб канал: https://rutube.ru/channel/34072414"
+    ui_print "Дзен канал: https://dzen.ru/avencores"
+    ui_print "Группа в ВК: https://vk.com/avencoresvk"
     ui_print "*******************************"
     return 0
   fi
   ui_print "*******************************"
   ui_print " Не найден поддерживаемый менеджер root (Magisk, KernelSU, APatch)! "
+  ui_print ""
+  ui_print "Написать автору в Телеграм: https://t.me/avencores"
+  ui_print "Написать автору в ВК: https://vk.com/avencores"
+  ui_print ""
+  ui_print "Ютуб канал: https://youtube.com/@avencores"
+  ui_print "Рутуб канал: https://rutube.ru/channel/34072414"
+  ui_print "Дзен канал: https://dzen.ru/avencores"
+  ui_print "Группа в ВК: https://vk.com/avencoresvk"
   ui_print "*******************************"
   exit 1
 }
