@@ -1,2 +1,2 @@
 ### Что нового:
-- Фикс GitHub и GitHub Copilot.
+- Добавлен 4PDA, Manus API.

@@ -1,87 +1,80 @@
 #!/sbin/sh
+# shellcheck shell=sh
 
 umask 022
+set -e
 
-ui_print() { echo "$1"; }
+# ────────── Константы ──────────
+MIN_MAGISK_VER=20400
 
-require_supported_env() {
-  if [ -f /data/adb/magisk/util_functions.sh ]; then
-    . /data/adb/magisk/util_functions.sh
-    if [ $MAGISK_VER_CODE -lt 20400 ]; then
-      ui_print "*******************************"
-      ui_print " Пожалуйста, установите Magisk v20.4+! "
-      ui_print ""
-      ui_print "Написать автору в Телеграм: https://t.me/avencores"
-      ui_print "Написать автору в VK: https://vk.com/avencores"
-      ui_print ""
-      ui_print "Ютуб канал: https://youtube.com/@avencores"
-      ui_print "Рутуб канал: https://rutube.ru/channel/34072414"
-      ui_print "Дзен канал: https://dzen.ru/avencores"
-      ui_print "Группа в ВК: https://vk.com/avencoresvk"
-      ui_print "*******************************"
-      exit 1
-    fi
-    ui_print "*******************************"
-    ui_print " Обнаружен Magisk. Продолжаем... "
-    ui_print ""
-    ui_print "Написать автору в Телеграм: https://t.me/avencores"
-    ui_print "Написать автору в ВК: https://vk.com/avencores"
-    ui_print ""
-    ui_print "Ютуб канал: https://youtube.com/@avencores"
-    ui_print "Рутуб канал: https://rutube.ru/channel/34072414"
-    ui_print "Дзен канал: https://dzen.ru/avencores"
-    ui_print "Группа в ВК: https://vk.com/avencoresvk"
-    ui_print "*******************************"
-    return 0
-  fi
-  if [ -f /data/adb/ksu/bin/ksud ]; then
-    ui_print "*******************************"
-    ui_print " Обнаружен KernelSU. Продолжаем... "
-    ui_print ""
-    ui_print "Написать автору в Телеграм: https://t.me/avencores"
-    ui_print "Написать автору в ВК: https://vk.com/avencores"
-    ui_print ""
-    ui_print "Ютуб канал: https://youtube.com/@avencores"
-    ui_print "Рутуб канал: https://rutube.ru/channel/34072414"
-    ui_print "Дзен канал: https://dzen.ru/avencores"
-    ui_print "Группа в ВК: https://vk.com/avencoresvk"
-    ui_print "*******************************"
-    return 0
-  fi
-  if [ -f /data/adb/apatch/apatchd ]; then
-    ui_print "*******************************"
-    ui_print " Обнаружен APatch. Продолжаем... "
-    ui_print ""
-    ui_print "Написать автору в Телеграм: https://t.me/avencores"
-    ui_print "Написать автору в ВК: https://vk.com/avencores"
-    ui_print ""
-    ui_print "Ютуб канал: https://youtube.com/@avencores"
-    ui_print "Рутуб канал: https://rutube.ru/channel/34072414"
-    ui_print "Дзен канал: https://dzen.ru/avencores"
-    ui_print "Группа в ВК: https://vk.com/avencoresvk"
-    ui_print "*******************************"
-    return 0
-  fi
+SOCIAL_LINKS="
+Написать автору в Телеграм: https://t.me/avencores
+Написать автору в VK:       https://vk.com/avencores
+
+Ютуб канал:  https://youtube.com/@avencores
+Рутуб канал: https://rutube.ru/channel/34072414
+Дзен канал:  https://dzen.ru/avencores
+Группа в ВК: https://vk.com/avencoresvk
+"
+
+# ────────── Вспомогательные функции ──────────
+ui_print() {
+  echo "$1"
+}
+
+banner() {
   ui_print "*******************************"
-  ui_print " Не найден поддерживаемый менеджер root (Magisk, KernelSU, APatch)! "
-  ui_print ""
-  ui_print "Написать автору в Телеграм: https://t.me/avencores"
-  ui_print "Написать автору в ВК: https://vk.com/avencores"
-  ui_print ""
-  ui_print "Ютуб канал: https://youtube.com/@avencores"
-  ui_print "Рутуб канал: https://rutube.ru/channel/34072414"
-  ui_print "Дзен канал: https://dzen.ru/avencores"
-  ui_print "Группа в ВК: https://vk.com/avencoresvk"
+  ui_print " $1 "
+  ui_print "$SOCIAL_LINKS"
   ui_print "*******************************"
+}
+
+abort() {
+  banner "$1"
   exit 1
 }
+
+# Определяем доступный менеджер root и проверяем его совместимость
+# Выход: 0 — поддерживаемая среда, иначе завершение через abort
+
+detect_root_env() {
+  # Magisk
+  if [ -f /data/adb/magisk/util_functions.sh ]; then
+    . /data/adb/magisk/util_functions.sh
+    if [ "${MAGISK_VER_CODE:-0}" -lt "$MIN_MAGISK_VER" ]; then
+      abort "Пожалуйста, установите Magisk v20.4+!"
+    fi
+    banner "Обнаружен Magisk. Продолжаем..."
+    return 0
+  fi
+
+  # KernelSU / APatch
+  for entry in \
+    "KernelSU:/data/adb/ksu/bin/ksud" \
+    "APatch:/data/adb/apatch/apatchd"; do
+    NAME=${entry%%:*}
+    FILE=${entry#*:}
+    if [ -f "$FILE" ]; then
+      banner "Обнаружен $NAME. Продолжаем..."
+      return 0
+    fi
+  done
+
+  abort "Не найден поддерживаемый менеджер root (Magisk, KernelSU, APatch)!"
+}
+
+######################################
+#                main               #
+######################################
 
 OUTFD=$2
 ZIPFILE=$3
 
-mount /data 2>/dev/null
+# Убедимся, что /data смонтирован (не критично, если нет)
+mount /data 2>/dev/null || true
 
-require_supported_env
+detect_root_env
 
+# Продолжение установки модуля (функция предоставляется окружением recovery)
 install_module
 exit 0
