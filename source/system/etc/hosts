@@ -180,6 +180,7 @@
 45.95.233.23 www.dyson.fr
 45.95.233.23 usher.ttvnw.net
 64.188.98.242 api.manus.im
+185.246.223.127 4pda.to
 
 # Блокировка реально плохих сайтов
 # Скримеры:
@@ -198,3 +199,15 @@
 0.0.0.0 ezstat.ru
 0.0.0.0 iplog.co
 0.0.0.0 grabify.org
+# Мусор/реклама:
+0.0.0.0 log16-platform-ycru.tiktokv.com
+0.0.0.0 adfox.yandex.ru
+0.0.0.0 adfstat.yandex.ru
+0.0.0.0 ads-api.tiktok.com
+0.0.0.0 ads-api.twitter.com
+0.0.0.0 ads-dev.pinterest.com
+0.0.0.0 ads-sg.tiktok.com
+0.0.0.0 an.yandex.ru
+0.0.0.0 appmetrica.yandex.ru
+0.0.0.0 mc.yandex.ru
+0.0.0.0. amc.yandex.ru
