@@ -2,7 +2,7 @@
 # shellcheck shell=sh
 
 umask 022
-set -e
+set -eu
 
 # ────────── Константы ──────────
 MIN_MAGISK_VER=20400
@@ -17,58 +17,83 @@ SOCIAL_LINKS="
 Группа в ВК: https://vk.com/avencoresvk
 "
 
+# ────────── Аргументы update-binary ──────────
+# Формат: <version> <OUTFD> <ZIPFILE>
+EDIFY_API="${1:-}"
+OUTFD="${2:-1}"
+ZIPFILE="${3:-}"
+
 # ────────── Вспомогательные функции ──────────
+_raw_ui() {
+  if [ -n "$OUTFD" ] 2>/dev/null; then
+    printf "ui_print %s\n" "$1" 1>&"$OUTFD" || printf "%s\n" "$1"
+    printf "ui_print \n" 1>&"$OUTFD" || :
+  else
+    printf "%s\n" "$1"
+  fi
+}
+
 ui_print() {
-  echo "$1"
+  IFS='\n'
+  for _line in $1; do
+    _raw_ui "$_line"
+  done
+  IFS=' \t\r'
 }
 
 banner() {
-  ui_print "*******************************"
-  ui_print " $1 "
+  _raw_ui "*******************************"
+  _raw_ui " $1 "
   ui_print "$SOCIAL_LINKS"
-  ui_print "*******************************"
+  _raw_ui "*******************************"
 }
 
 abort() {
-  banner "$1"
+  banner "${1:-Установка прервана}"
   exit 1
 }
+
+trap 'abort "Произошла ошибка во время установки"' INT TERM HUP QUIT
+trap 'abort "Произошла ошибка во время установки"' EXIT
 
 # Определяем доступный менеджер root и проверяем его совместимость
 # Выход: 0 — поддерживаемая среда, иначе завершение через abort
 
 detect_root_env() {
-  # Magisk
+  # Magisk (основной путь API установки модулей)
   if [ -f /data/adb/magisk/util_functions.sh ]; then
     . /data/adb/magisk/util_functions.sh
     if [ "${MAGISK_VER_CODE:-0}" -lt "$MIN_MAGISK_VER" ]; then
       abort "Пожалуйста, установите Magisk v20.4+!"
     fi
     banner "Обнаружен Magisk. Продолжаем..."
+  else
+    # KernelSU / APatch — наличие окружения
+    for entry in \
+      "KernelSU:/data/adb/ksu/bin/ksud" \
+      "APatch:/data/adb/apatch/apatchd"; do
+      NAME=${entry%%:*}
+      FILE=${entry#*:}
+      if [ -f "$FILE" ]; then
+        banner "Обнаружен $NAME. Продолжаем..."
+        # Попробуем подключить util_functions, если присутствует
+        [ -f /data/adb/magisk/util_functions.sh ] && . /data/adb/magisk/util_functions.sh || true
+        break
+      fi
+    done
+  fi
+
+  # Проверим наличие install_module, иначе нет смысла продолжать
+  if command -v install_module >/dev/null 2>&1; then
     return 0
   fi
 
-  # KernelSU / APatch
-  for entry in \
-    "KernelSU:/data/adb/ksu/bin/ksud" \
-    "APatch:/data/adb/apatch/apatchd"; do
-    NAME=${entry%%:*}
-    FILE=${entry#*:}
-    if [ -f "$FILE" ]; then
-      banner "Обнаружен $NAME. Продолжаем..."
-      return 0
-    fi
-  done
-
-  abort "Не найден поддерживаемый менеджер root (Magisk, KernelSU, APatch)!"
+  abort "Не найден API установки модулей (install_module).\n\nОткройте ZIP через приложение Magisk/KernelSU/APatch либо обновите окружение с поддержкой установки из recovery."
 }
 
 ######################################
 #                main               #
 ######################################
-
-OUTFD=$2
-ZIPFILE=$3
 
 # Убедимся, что /data смонтирован (не критично, если нет)
 mount /data 2>/dev/null || true
