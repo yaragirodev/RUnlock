@@ -4,4 +4,5 @@
   - Twitter (X)
   - Netflix
   - HBO / Max
+  - Pastebin
    
