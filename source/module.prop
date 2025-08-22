@@ -3,5 +3,5 @@ name=Unlock EN Services for Russia
 version=1.2.7
 versionCode=127
 author=avencores/yaragirodev
-description=🛡 Модуль для разблокировки зарубежных сервисов для России 🌍
+description=Модуль для разблокировки зарубежных сервисов для России
 updateJson=https://raw.githubusercontent.com/yaragirodev/RUnlock/refs/heads/main/update.json
