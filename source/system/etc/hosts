@@ -213,3 +213,30 @@
 0.0.0.0 appmetrica.yandex.ru
 0.0.0.0 mc.yandex.ru
 0.0.0.0 amc.yandex.ru
+
+# X/Twitter:
+204.12.192.222 twitter.com
+204.12.192.222 x.com
+204.12.192.222 mobile.twitter.com
+204.12.192.222 api.twitter.com
+204.12.192.222 abs.twimg.com
+204.12.192.222 ton.twimg.com
+
+# Discord:
+204.12.192.222 discord.com
+204.12.192.222 cdn.discordapp.com
+204.12.192.222 status.discord.com
+204.12.192.222 media.discordapp.net
+
+# Netflix:
+204.12.192.222 netflix.com
+204.12.192.222 www.netflix.com
+204.12.192.222 assets.nflxext.com
+
+HBO Max (не мессенджер!):
+204.12.192.222 max.com
+204.12.192.222 play.max.com
+
+# Pastebin:
+204.12.192.222 pastebin.com
+
