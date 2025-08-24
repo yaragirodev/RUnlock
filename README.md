@@ -4,13 +4,13 @@
 
 <p align="center">
   <a href="https://github.com/AvenCores/Unlock_AI_and_EN_Services_for_Russia/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/AvenCores/Unlock_AI_and_EN_Services_for_Russia?style=flat-square" alt="License"/>
+    <img src="https://img.shields.io/github/license/yaragirodev/RUnlock?style=flat-square" alt="License"/>
   </a>
   <a href="https://github.com/AvenCores/Unlock_AI_and_EN_Services_for_Russia/releases/latest">
-    <img src="https://img.shields.io/github/v/release/AvenCores/Unlock_AI_and_EN_Services_for_Russia?style=flat-square" alt="Latest release"/>
+    <img src="https://img.shields.io/github/v/release/yaragirodev/RUnlock?style=flat-square" alt="Latest release"/>
   </a>
   <a href="https://github.com/AvenCores/Unlock_AI_and_EN_Services_for_Russia/releases">
-    <img src="https://img.shields.io/github/downloads/AvenCores/Unlock_AI_and_EN_Services_for_Russia/total?style=flat-square" alt="Downloads"/>
+    <img src="https://img.shields.io/github/downloads/yaragirodev/RUnlock/total?style=flat-square" alt="Downloads"/>
   </a>
 </p>
 
